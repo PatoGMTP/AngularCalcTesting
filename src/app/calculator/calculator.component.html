@@ -1,0 +1,31 @@
+
+<div class="outer_frame">
+    <div class="screen">
+        <input type="text" [(ngModel)]="input">
+    </div>
+
+    <div class="buttons">
+        <div class="mem">
+            <button class="medium" (click)="addInput($event)">Ans</button>
+            <button class="medium" (click)="reset()">Clear All</button>
+            <button class="medium" (click)="clear()">Clear Entry</button>
+            <button class="medium" (click)="repeat()">Repeat</button>
+        </div>
+
+        <div class="rest">
+            <div class="numbers">
+                <button class="small" *ngFor="let num of numbers" (click)="addInput($event)">{{num}}</button>
+                <button class="small" (click)="addInput($event)">{{period}}</button>
+                <button class="small" (click)="calculate()">=</button>
+            </div>
+    
+            <div class="functions">
+                <button class="small" *ngFor="let op of operators_arr" (click)="addInput($event)">{{op}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="history">
+    <p *ngFor="let eq of history">{{eq}}</p>
+</div>

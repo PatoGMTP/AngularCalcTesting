@@ -1,0 +1,74 @@
+:host
+{
+    display: flex;
+    justify-content: center;
+}
+
+.outer_frame
+{
+    border: 1px solid black;
+    width: 500px;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .screen
+    {
+        padding-top: 20px;
+         
+        input
+        {
+            height: 30px;
+            width: 450px;
+        }
+    }
+}
+
+button
+{
+    width: 50px;
+    height: 50px;
+}
+
+.medium
+{
+    width: 100px;
+}
+
+.buttons
+{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+
+    padding: 20px;
+
+    .mem
+    {
+        display: flex;
+        flex-flow: row;
+        gap: 20px;
+    }
+
+    .rest
+    {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        gap: 20px;
+
+        .numbers
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .functions
+        {
+            display: flex;
+            flex-flow: column;
+        }
+    }
+}
